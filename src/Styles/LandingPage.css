@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.LandingPage {
+    text-align: center;
+    background-color: aqua;
+    height: 8rem;
+}
+
+.LandingPage h1 {
+    color: blue;
+    font-size: 2.5rem;
+    text-align: center;
+    align-items: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.LandingPage p{
+    margin-top: .8rem;
+}
+
+/* Change the color of both AdminLogin and UserLogin links */
+.LandingPage a {
+    color: orangered; 
+    font-weight: bold; 
+    text-decoration: underline;
+    font-size: 1.1rem;
+    margin: 0 4rem;
+    /* background-color: lightblue;  */
+    padding: 0.5rem 1rem;
+    /* border-radius: 2.5rem; */
+    /* border: 2px solid black; */
+
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .1rem;
+}
+
+/* Change color on hover for both links */
+.LandingPage a:hover {
+    color: darkgreen;
+    text-decoration: dotted; 
+}
+
+.LandingPage img {
+    max-width: 100%; /* Makes image responsive */
+    height: auto;
+    margin: 20px 0;
+}
+
+/* Add a background image to the LandingPage */
+.content {
+    background-image: url('../assets/img.png'); /* Corrected path */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 2rem;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.content p {
+    font-size: 18px;
+    margin-top: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.scrolling-text {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: scroll 15s linear infinite;
+    direction: ltr;
+}
+
+.scrolling-text:hover {
+    animation-play-state: paused;
+}
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+    .LandingPage {
+        padding-top: 80px;
+    }
+
+    .LandingPage h1 {
+        font-size: 28px;
+    }
+
+    .LandingPage p {
+        font-size: 16px;
+    }
+
+    .container a {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .content h1 {
+        font-size: 24px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .LandingPage {
+        padding-top: 60px;
+    }
+
+    .LandingPage h1 {
+        font-size: 24px;
+    }
+
+    .LandingPage p {
+        font-size: 14px;
+    }
+
+    .container a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .content h1 {
+        font-size: 22px;
+    }
+
+    .content p {
+        font-size: 14px;
+    }
+}
