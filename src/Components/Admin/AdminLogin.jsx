@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import admin from "../../assets/adminImage.png";
 import { Link } from "react-router-dom";
 import "../../Styles/AdminLogin.css"; 
-
 export default function AdminLogin() {
   let [username, setUsername] = useState("");
   let [password, setPassword] = useState("");
