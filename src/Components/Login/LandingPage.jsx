@@ -10,12 +10,12 @@ export default function LandingPage() {
         This is a simple Bus Ticket Booking System. You can login as an Admin or User.
       </p>
       <div className={styles.loginLinks}>
-        <Link to="/adminlogin">Admin Login/SignUp</Link> <br />
-        <Link to="/userlogin">User Login/SignUp</Link>
+        <Link to="/adminlogin" className={styles.loginButton}>Admin Login/SignUp</Link>
+        <Link to="/userlogin" className={styles.loginButton}>User Login/SignUp</Link>
       </div>
 
       <div className={styles.content}>
-      <div className={styles.scrollingText}>
+        <div className={styles.scrollingText}>
           <h1>India's No. 1 Online Bus Ticket Booking Site</h1>
         </div>
         <p>

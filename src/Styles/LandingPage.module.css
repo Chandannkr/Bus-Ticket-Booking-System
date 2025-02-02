@@ -20,15 +20,6 @@
   margin-top: 0.8rem;
 }
 
-
-.loginLinks a {
-  color: orangered;
-  font-weight: bold;
-  text-decoration: underline;
-  font-size: 1.1rem;
-  margin: 0 4rem;
-}
-
 /* Change the color of both AdminLogin and UserLogin links */
 .LandingPage a {
   color: orangered;
@@ -36,23 +27,34 @@
   text-decoration: underline;
   font-size: 1.1rem;
   margin: 0 4rem;
-  /* background-color: lightblue;  */
   padding: 0.5rem 1rem;
-  /* border-radius: 2.5rem; */
-  /* border: 2px solid black; */
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.1rem;
-}
-
-/* Change color on hover for both links */
 .LandingPage a:hover {
   color: darkgreen;
   text-decoration: dotted;
+}
+
+/* Login Links - Center and Horizontal Layout */
+.loginLinks {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.loginButton {
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.loginButton:hover {
+  background-color: #0056b3;
 }
 
 .LandingPage img {
@@ -79,7 +81,6 @@
   font-weight: bold;
   margin-top: 2rem;
   color: black;
-  font-weight: bold;
 }
 
 .content p {
@@ -88,7 +89,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.scrolling-text {
+.scrollingText {
   overflow: hidden;
   white-space: nowrap;
   box-sizing: border-box;
@@ -96,7 +97,7 @@
   direction: ltr;
 }
 
-.scrolling-text:hover {
+.scrollingText:hover {
   animation-play-state: paused;
 }
 
@@ -110,7 +111,6 @@
 }
 
 /* Responsive Styles */
-
 @media (max-width: 768px) {
   .LandingPage {
     padding-top: 80px;
@@ -124,7 +124,7 @@
     font-size: 16px;
   }
 
-  .container a {
+  .loginButton {
     font-size: 16px;
     padding: 8px 16px;
   }
@@ -151,7 +151,7 @@
     font-size: 14px;
   }
 
-  .container a {
+  .loginButton {
     font-size: 14px;
     padding: 6px 12px;
   }
@@ -165,14 +165,7 @@
   }
 }
 
-/* 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0.1rem;
-} */
-
+/* Search container styling */
 .search_container {
   justify-content: center;
   display: flex;
@@ -244,7 +237,6 @@
   height: 100%;
 }
 
-
 .date_container input::placeholder {
     font-size: 1.2rem; 
 }
@@ -287,28 +279,6 @@
   }
 }
 
-/* Responsive Styles */
-@media (max-width: 1024px) {
-  .search_container {
-    width: 50rem;
-  }
-
-  .search_box {
-    width: 50rem;
-  }
-
-  .search_box input {
-    width: 10rem;
-  }
-
-  .search_box button {
-    width: 8rem;
-  }
-
-  .date_container {
-    width: 10rem; /* Adjust width for responsiveness */
-  }
-}
 @media (max-width: 480px) {
   .search_container {
     width: 90%;

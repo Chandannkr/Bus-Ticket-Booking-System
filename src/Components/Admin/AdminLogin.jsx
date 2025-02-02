@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import admin from "../../assets/adminImage.png";
 import { Link } from "react-router-dom";
-import styles from "../../Styles/AdminPage.module.css"; // Import CSS Module
+import admin from "../../assets/adminImage.png";
+import styles from "../../Styles/AdminPage.module.css"; // Ensure this is imported correctly
 
 export default function AdminLogin() {
   const [username, setUsername] = useState("");
@@ -21,8 +21,8 @@ export default function AdminLogin() {
         <img src={admin} alt="Admin" />
       </aside>
       <aside className={styles.adminForm}>
-        <form>
-          <label>Username :</label>
+        <form onSubmit={(e) => e.preventDefault()}>
+          <label>Username:</label>
           <input
             required
             value={username}
@@ -30,7 +30,7 @@ export default function AdminLogin() {
             type="text"
             placeholder="Enter the Username"
           />
-          <label>Password :</label>
+          <label>Password:</label>
           <input
             required
             value={password}
@@ -38,9 +38,7 @@ export default function AdminLogin() {
             type="password"
             placeholder="Enter the Password"
           />
-          <button onClick={(e) => { e.preventDefault(); login(); }}>
-            Login
-          </button>
+          <button onClick={login}>Login</button>
           <span>
             Register as Admin <Link to="/adminsignup">Signup</Link>
           </span>

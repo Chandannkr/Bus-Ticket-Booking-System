@@ -1,70 +1,55 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "../../Styles/AdminPage.module.css"; // Import CSS Module
+import styles from "../../Styles/AdminSignup.module.css"; // Ensure correct import
 
 export default function AdminSignup() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
 
   function handleSignup(e) {
     e.preventDefault();
-    if (password !== confirmPassword) {
-      alert("Passwords do not match!");
-      return;
-    }
-    alert("Account Created Successfully");
+    alert("Signup Successful");
   }
 
   return (
     <div className={styles.adminSignup}>
-      <aside className={styles.signupForm}>
+      <div className={styles.signupForm}>
         <h2>Admin Signup</h2>
-        <form>
-          <label>Username :</label>
+        <form onSubmit={handleSignup}>
+          <label>Username:</label>
           <input
             required
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             type="text"
-            placeholder="Enter Username"
+            placeholder="Enter your username"
           />
 
-          <label>Email :</label>
+          <label>Email:</label>
           <input
             required
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            placeholder="Enter Email"
+            placeholder="Enter your email"
           />
 
-          <label>Password :</label>
+          <label>Password:</label>
           <input
             required
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            placeholder="Enter Password"
+            placeholder="Enter your password"
           />
 
-          <label>Confirm Password :</label>
-          <input
-            required
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            type="password"
-            placeholder="Confirm Password"
-          />
-
-          <button onClick={handleSignup}>Signup</button>
-
-          <span>
+          <button type="submit">Signup</button>
+          <p>
             Already have an account? <Link to="/adminlogin">Login</Link>
-          </span>
+          </p>
         </form>
-      </aside>
+      </div>
     </div>
   );
 }
