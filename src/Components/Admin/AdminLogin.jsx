@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import admin from "../../assets/adminImage.png";
 import { Link } from "react-router-dom";
-import "../../Styles/AdminLogin.css"; 
+import styles from "../../Styles/AdminPage.module.css"; // Import CSS Module
+
 export default function AdminLogin() {
-  let [username, setUsername] = useState("");
-  let [password, setPassword] = useState("");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   function login() {
     if (username === "abcd" && password === "1234") {
@@ -15,12 +16,12 @@ export default function AdminLogin() {
   }
 
   return (
-    <div className="AdminLogin">
-      <aside className="admin_sideImage">
+    <div className={styles.adminLogin}>
+      <aside className={styles.adminSideImage}>
         <img src={admin} alt="Admin" />
       </aside>
-      <aside className="admin_form">
-        <form action="">
+      <aside className={styles.adminForm}>
+        <form>
           <label>Username :</label>
           <input
             required

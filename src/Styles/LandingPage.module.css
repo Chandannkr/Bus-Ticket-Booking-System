@@ -20,6 +20,15 @@
   margin-top: 0.8rem;
 }
 
+
+.loginLinks a {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  margin: 0 4rem;
+}
+
 /* Change the color of both AdminLogin and UserLogin links */
 .LandingPage a {
   color: orangered;
