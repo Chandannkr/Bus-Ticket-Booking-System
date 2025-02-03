@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import styles from "../../Styles/AdminSignup.module.css"; // Ensure correct import
+import styles from "../../Styles/AdminSignup.module.css";
 
 export default function AdminSignup() {
   const [username, setUsername] = useState("");
