@@ -1,11 +1,13 @@
 import React from 'react'
-import "C:\Users\HP\Desktop\cart-app\src\Styles\AdminSideBar.css"
-import { Link } from 'react-router-dom'
+import '../../Styles/AdminSideBar.css'
+import { NavLink } from 'react-router-dom'
 
 const AdminSideBar = () => {
   return (
     <div className='AdminSideBar'>
-      <Link to='/Dash'
+      <NavLink to='/adminhomepage/dashboard'>Dashboard</NavLink>
+      <NavLink to='/adminhomepage/Addbus'>Dashboard</NavLink>
+      <NavLink to='/'>Logout</NavLink>
     </div>
   )
 }

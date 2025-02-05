@@ -1,5 +1,5 @@
 import React from "react";
-import "C:\Users\HP\Desktop\cart-app\src\Styles\AdminHeader.css"
+import "../../Styles/AdminHeader.css"
 
 const Header = () =>{
     return(
