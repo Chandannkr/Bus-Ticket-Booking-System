@@ -1,79 +1,54 @@
-.adminLogin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #9c8b8b;
-  }
-  
-  .adminSideImage {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .adminSideImage img {
+
+form {
+    width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #333;
+}
+
+
+input[type="text"],
+input[type="password"] {
     width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
-  }
-  
-  .adminForm {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: white;
-    padding: 4.5rem;
-    border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .adminForm form {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-  }
-  
-  .adminForm label {
-    font-weight: bold;
-    margin-top: 1rem;
-  }
-  
-  .adminForm input {
     padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .adminForm button {
-    margin-top: 1rem;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+button {
+    width: 100%;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #4CAF50;
     color: white;
+    font-size: 16px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-  }
-  
-  .adminForm button:hover {
-    background-color: #0056b3;
-  }
-  
-  .adminForm span {
-    margin-top: 1rem;
-  }
-  
-  .adminForm a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
-  .adminForm a:hover {
-    text-decoration: underline;
-  }
-  
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+input:last-child {
+    margin-bottom: 0;
+}
