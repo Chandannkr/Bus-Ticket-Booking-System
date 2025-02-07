@@ -16,7 +16,7 @@ export default function AdminLogin() {
       .get("http://localhost:3000/info.json")
       .then((res) => setUsers(res.data))
       .catch((err) => console.log("Error:", err));
-  }, []);  
+  }, []);
 
   function handleFun(e) {
     e.preventDefault();
@@ -25,9 +25,9 @@ export default function AdminLogin() {
     );
 
     if (userFound) {
-      localStorage.setItem("isLoggedIn", "true"); 
+      localStorage.setItem("isLoggedIn", "true");
       toast.success("Login success!");
-      setTimeout(() => navigate("/AdminHomePage"), 2000); 
+      setTimeout(() => navigate("/AdminHomePage"), 2000);
     } else {
       toast.error("Login failed!");
     }
