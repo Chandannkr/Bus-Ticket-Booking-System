@@ -1,0 +1,21 @@
+.AddBus{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.AddBus form{
+    display: grid;
+    grid-template-columns: 200px 300px;
+    position: relative;
+    left : 30%;
+    top : 4%;
+}
+.AddBus label{
+    color: rgb(0, 106, 255);
+    font-size: 27px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}

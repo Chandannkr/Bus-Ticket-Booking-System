@@ -1,0 +1,36 @@
+.AdminLogin {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin_sideImage img {
+    height: 80vh;
+    width: 30vw;
+}
+
+.admin_form form {
+    border: 2px solid white;
+    display: grid;
+    grid-template-rows: 58px 58px 58px 58px 100px;
+    align-items: start;
+    grid-template-columns: 300px;
+    align-content: center;
+    height: 72vh;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.admin_form input,
+button {
+    color: black;
+    font-size: 25px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+.admin_form span {
+    font-size: 25px;
+}

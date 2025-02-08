@@ -1,0 +1,35 @@
+.adminImage {
+    height: 10rem;
+    width: 13rem ;
+    margin: 2px;
+    border-radius: 10px;
+}
+.userImage {
+    height: 10rem;
+    width: 13rem ;
+    margin: 2px;
+    border-radius: 10px;
+}
+.anchor {
+    text-align: center;
+    color: aqua;
+    font-family: cursive;
+    text-decoration: none;
+}
+#para {
+    color: red;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.LandingPage {
+    display: flex;
+    align-items: center;
+    height: 30vh;
+    width: 40vw;
+    justify-content: center;
+    background-color: rgb(99, 139, 126);
+    border: 2px solid green;
+    position: relative;
+    top: 30vh;
+    left: 30vw;
+}

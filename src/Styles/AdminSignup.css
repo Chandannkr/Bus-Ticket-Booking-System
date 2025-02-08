@@ -1,0 +1,33 @@
+.adminsignup{
+    background-image: url(../Assets/AdminSignup.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.adminsignup form{
+    justify-content: start;
+    display: grid;
+    grid-template-columns: 13rem 24rem;
+    color: white;
+    position: relative;
+    top: 10rem;
+
+}
+.adminsignup label,input{
+    margin: 10px;
+    font-size: 26px;
+    background-color: inherit;
+    color: black;
+
+}
+.adminsignup input::placeholder{
+    color: black;
+
+}
+.adminsignup input{
+    border: 2px solid white;
+
+}

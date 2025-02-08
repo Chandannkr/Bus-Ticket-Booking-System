@@ -1,0 +1,20 @@
+.AdminSidebar{
+    display: flex;
+    flex-direction: column;
+}
+.AdminSidebar a{
+    margin: 10px;
+    font-size: 25px;
+    color: brown;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 10px;
+}
+.AdminSidebar a:hover{
+    background-color: rgb(214, 96, 96);
+    color: white;
+}
+.AdminSidebar .active{
+    background-color: chocolate;
+    color: white;
+}

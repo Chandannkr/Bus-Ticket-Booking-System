@@ -1,0 +1,34 @@
+.usersginup{
+    background-image: url(../Assets/userbussignup.png);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.usersginup form{
+    justify-content: start;
+    display: grid;
+    grid-template-columns: 13rem 24rem;
+    color: white;
+    position: relative;
+    top: 10rem;
+
+}
+.usersginup label,input{
+    margin: 10px;
+    font-size: 26px;
+    background-color: inherit;
+
+}
+
+.usersginup input::placeholder{
+    color: white;
+
+}
+.usersginup input{
+    border: 2px solid white;
+
+}
+

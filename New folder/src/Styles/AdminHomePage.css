@@ -1,0 +1,8 @@
+section{
+    display: flex;
+}
+.side_content{
+    background-color: rgb(244, 208, 161);
+    height: 90vh;
+    width: 14vw;
+}

@@ -1,43 +1,6 @@
 {
-  "List_of_Admins": [
-    {
-      "id": "0a30",
-      "user": "s",
-      "email": "s",
-      "password": "s"
-    },
-    {
-      "id": "72e5",
-      "user": "abcd",
-      "email": "sanjeetyadav99999@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "6cb9",
-      "user": "abcd",
-      "email": "sanjeetyadav99999@gmail.com",
-      "password": "5678"
-    },
-    {
-      "id": "b53a",
-      "user": "dec",
-      "email": "sanjeetyadav99999@gmail.com",
-      "password": "1234"
-    },
-    {
-      "id": "48af",
-      "user": "chinkimanav",
-      "email": "chinki@gmail.com",
-      "password": "chinki@1223"
-    }
-  ],
-  "List_of_users": [
-    {
-      "id": "6661",
-      "name": "a",
-      "mail": "sanjeetyadav99999@gmail.com",
-      "password": "h",
-      "number": "06204549294"
-    }
+  "info": [
+    { "user": "admin", "password": "admin123" },
+    { "user": "user", "password": "user123" }
   ]
 }

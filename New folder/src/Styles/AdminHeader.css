@@ -1,0 +1,15 @@
+.Header>.logo>h1{
+    font-style: italic;
+    color: beige;
+}
+.Header>.logo span{
+    color: brown;
+}
+.Header{
+    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 100px;
+    height: 10vh;
+}
