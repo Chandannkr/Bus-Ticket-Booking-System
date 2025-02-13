@@ -55,7 +55,7 @@ export default function AdminLogin() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter password"
+            placeh1older="Enter password"
           />
           <Link to="/adminsignup">Create Account</Link>
           <button type="submit">Submit</button>
