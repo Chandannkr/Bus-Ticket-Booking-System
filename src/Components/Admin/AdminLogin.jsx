@@ -14,7 +14,11 @@ export default function AdminLogin() {
   useEffect(() => {
     axios
       .get("http://localhost:3000/info.json")
-      .then((res) => setUsers(res.data))
+      .then((res) => {
+        if (res.data && res.data.info) {
+          setUsers(res.data.info); // Accessing the correct structure
+        }
+      })
       .catch((err) => console.log("Error:", err));
   }, []);
 
@@ -27,9 +31,9 @@ export default function AdminLogin() {
     if (userFound) {
       localStorage.setItem("isLoggedIn", "true");
       toast.success("Login success!");
-      setTimeout(() => navigate("/AdminHomePage"), 2000);
+      setTimeout(() => navigate("/adminhomepage"), 2000);
     } else {
-      toast.error("Login failed!");
+      toast.error("Login failed! Invalid username or password.");
     }
   }
 
@@ -37,7 +41,7 @@ export default function AdminLogin() {
     <div className="adminLog">
       <ToastContainer position="top-center" autoClose={2000} />
       <aside className="admin_image">
-        <img src="" alt="" />
+        <img src="" alt="Admin" />
       </aside>
       <aside className="admin_form">
         <form onSubmit={handleFun}>
@@ -55,7 +59,7 @@ export default function AdminLogin() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeh1older="Enter password"
+            placeholder="Enter password"
           />
           <Link to="/adminsignup">Create Account</Link>
           <button type="submit">Submit</button>
