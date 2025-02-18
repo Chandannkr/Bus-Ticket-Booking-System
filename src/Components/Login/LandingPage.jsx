@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import styles from "../../Styles/LandingPage.module.css";
 
 export default function LandingPage() {
+  const setDate = (daysFromToday) => {
+    const today = new Date();
+    today.setDate(today.getDate() + daysFromToday);
+    document.querySelector('input[type="date"]').value = today.toISOString().split("T")[0];
+  };
+
   return (
     <div className={styles.LandingPage}>
       <h1>Welcome To Bus Ticket Booking System</h1>
@@ -25,14 +31,14 @@ export default function LandingPage() {
         <div className={styles.container}>
           <form className={styles.search_container}>
             <div className={styles.search_box}>
-              <input type="text" placeholder="Source" />
-              <input type="text" placeholder="Destination" />
+              <input type="text" placeholder="Source" name="source" />
+              <input type="text" placeholder="Destination" name="destination" />
               <div className={styles.date_container}>
-                <input type="date" />
-                <button>Today</button>
-                <button>Tomorrow</button>
+                <input type="date" name="date" />
+                <button type="button" onClick={() => setDate(0)}>Today</button>
+                <button type="button" onClick={() => setDate(1)}>Tomorrow</button>
               </div>
-              <button type="button">Search</button>
+              <Link to="/search-results" className={styles.searchButton}>Search</Link>
             </div>
           </form>
         </div>
