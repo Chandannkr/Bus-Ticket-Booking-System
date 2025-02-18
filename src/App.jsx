@@ -5,12 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 
 import "./App.css";
 
-// Lazy load components
-const LandingPage = lazy(() => import("./components/Login/LandingPage"));
-const AdminLogin = lazy(() => import("./components/Admin/AdminLogin"));
-const AdminSignup = lazy(() => import("./components/Admin/AdminSignup"));
-const UserLogin = lazy(() => import("./components/User/UserLogin"));
-const AdminHomePage = lazy(() => import("./components/Main/AdminHomePage"));
+import LandingPage from "./Components/Login/LandingPage";
+import AdminLogin from "./Components/Admin/AdminLogin";
+import AdminSignup from "./Components/Admin/AdminSignup";
+import UserLogin from "./Components/User/UserLogin";
+import AdminHomePage from "./Components/Main/AdminHomePage";
 
 function App() {
   return (
