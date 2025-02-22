@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -14,15 +14,13 @@ import AdminHomePage from "./Components/Main/AdminHomePage";
 function App() {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/adminlogin" element={<AdminLogin />} />
-          <Route path="/adminsignup" element={<AdminSignup />} />
-          <Route path="/userlogin" element={<UserLogin />} />
-          <Route path="/adminhomepage" element={<AdminHomePage />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/adminlogin" element={<AdminLogin />} />
+        <Route path="/adminsignup" element={<AdminSignup />} />
+        <Route path="/userlogin" element={<UserLogin />} />
+        <Route path="/adminhomepage" element={<AdminHomePage />} />
+      </Routes>
       <ToastContainer />
     </Router>
   );
