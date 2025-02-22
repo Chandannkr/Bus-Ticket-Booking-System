@@ -50,7 +50,6 @@
   "bugs": {
     "url": "https://github.com/Chandannkr/Bus-Ticket-Booking-System/issues"
   },
-  "homepage": "https://github.com/Chandannkr/Bus-Ticket-Booking-System#readme",
   "devDependencies": {
     "react-scripts": "^5.0.1",
     "webpack": "^5.98.0"
