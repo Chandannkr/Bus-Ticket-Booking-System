@@ -13,7 +13,7 @@ import AdminHomePage from "./Components/Main/AdminHomePage";
 
 function App() {
   return (
-    <Router>
+    <Router> {/* Removed 'basename' if it was set */}
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
