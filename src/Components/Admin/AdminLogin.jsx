@@ -16,7 +16,7 @@ export default function AdminLogin() {
       .get("http://localhost:3000/info.json")
       .then((res) => {
         if (res.data && res.data.info) {
-          setUsers(res.data.info); // Accessing the correct structure
+          setUsers(res.data.info);
         }
       })
       .catch((err) => console.log("Error:", err));
