@@ -1,20 +1,22 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import styles from "../../Styles/LandingPage.module.css";
 
 export default function LandingPage() {
+  const dateInputRef = useRef(null);
+
   const setDate = (daysFromToday) => {
     const today = new Date();
     today.setDate(today.getDate() + daysFromToday);
-    document.querySelector('input[type="date"]').value = today.toISOString().split("T")[0];
+    if (dateInputRef.current) {
+      dateInputRef.current.value = today.toISOString().split("T")[0];
+    }
   };
 
   return (
     <div className={styles.LandingPage}>
       <h1>Welcome To Bus Ticket Booking System</h1>
-      <p>
-        This is a simple Bus Ticket Booking System. You can login as an Admin or User.
-      </p>
+      <p>This is a simple Bus Ticket Booking System. You can login as an Admin or User.</p>
       <div className={styles.loginLinks}>
         <Link to="/adminlogin" className={styles.loginButton}>Admin Login/SignUp</Link>
         <Link to="/userlogin" className={styles.loginButton}>User Login/SignUp</Link>
@@ -34,7 +36,7 @@ export default function LandingPage() {
               <input type="text" placeholder="Source" name="source" />
               <input type="text" placeholder="Destination" name="destination" />
               <div className={styles.date_container}>
-                <input type="date" name="date" />
+                <input type="date" name="date" ref={dateInputRef} />
                 <button type="button" onClick={() => setDate(0)}>Today</button>
                 <button type="button" onClick={() => setDate(1)}>Tomorrow</button>
               </div>
