@@ -6,32 +6,32 @@ import "react-toastify/dist/ReactToastify.css";
 import "../../Styles/AdminLogin.css";
 
 export default function AdminLogin() {
-  let [username, setUsername] = useState("");
-  let [password, setPassword] = useState("");
-  let [user, setUsers] = useState([]);
-  let navigate = useNavigate();
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
-      .get("http://localhost:3000/info.json")
+      .get("/info.json") // Ensure info.json exists in the 'public' folder
       .then((res) => {
         if (res.data && res.data.info) {
           setUsers(res.data.info);
         }
       })
-      .catch((err) => console.log("Error:", err));
+      .catch((err) => console.error("Error fetching data:", err));
   }, []);
 
-  function handleFun(e) {
+  function handleLogin(e) {
     e.preventDefault();
-    let userFound = user.some(
+    const userFound = users.some(
       (user) => user.user === username && user.password === password
     );
 
     if (userFound) {
       localStorage.setItem("isLoggedIn", "true");
       toast.success("Login success!");
-      setTimeout(() => navigate("/adminhomepage"), 2000);
+      setTimeout(() => navigate("/adminhomepage", { replace: true }), 2000);
     } else {
       toast.error("Login failed! Invalid username or password.");
     }
@@ -41,11 +41,11 @@ export default function AdminLogin() {
     <div className="adminLog">
       <ToastContainer position="top-center" autoClose={2000} />
       <aside className="admin_image">
-        <img src="" alt="Admin" />
+        <img src="/admin.png" alt="Admin" /> {/* Ensure the image exists in 'public' */}
       </aside>
       <aside className="admin_form">
-        <form onSubmit={handleFun}>
-          <label>UserName :</label>
+        <form onSubmit={handleLogin}>
+          <label>Username:</label>
           <input
             required
             value={username}
@@ -54,7 +54,7 @@ export default function AdminLogin() {
             placeholder="Enter the username"
           />
 
-          <label>Password :</label>
+          <label>Password:</label>
           <input
             type="password"
             value={password}

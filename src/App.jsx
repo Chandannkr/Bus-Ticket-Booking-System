@@ -2,7 +2,6 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import "./App.css";
 
 import LandingPage from "./Components/Login/LandingPage";
 import AdminLogin from "./Components/Admin/AdminLogin";
@@ -20,7 +19,7 @@ function App() {
         <Route path="/userlogin" element={<UserLogin />} />
         <Route path="/adminhomepage" element={<AdminHomePage />} />
       </Routes>
-      <ToastContainer />
+      <ToastContainer position="top-center" autoClose={2000} />
     </>
   );
 }
