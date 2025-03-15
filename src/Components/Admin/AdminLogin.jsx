@@ -13,7 +13,7 @@ export default function AdminLogin() {
 
   useEffect(() => {
     axios
-      .get("/info.json") // Ensure info.json exists in the 'public' folder
+      .get("/db.json") 
       .then((res) => {
         if (res.data && res.data.info) {
           setUsers(res.data.info);
