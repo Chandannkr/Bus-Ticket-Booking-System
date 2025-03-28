@@ -33,7 +33,7 @@ export default function AdminLogin() {
       toast.success("Login success!");
       setTimeout(() => navigate("/adminhomepage", { replace: true }), 2000);
     } else {
-      toast.error("Login failed! Invalid username or password.");
+      toast.error("Login failed! Invalid username or Password.");
     }
   }
 
