@@ -51,7 +51,7 @@ export default function AdminLogin() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             type="text"
-            placeholder="Enter the username"
+            placeholder="Enter the Username"
           />
 
           <label>Password:</label>
@@ -59,7 +59,7 @@ export default function AdminLogin() {
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter password"
+            placeholder="Enter the Password"
           />
           <Link to="/adminsignup">Create Account</Link>
           <button type="submit">Submit</button>
