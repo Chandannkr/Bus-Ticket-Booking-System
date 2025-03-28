@@ -41,7 +41,7 @@ export default function AdminLogin() {
     <div className="adminLog">
       <ToastContainer position="top-center" autoClose={2000} />
       <aside className="admin_image">
-        <img src="/admin.png" alt="Admin" /> {/* Ensure the image exists in 'public' */}
+        <img src="/admin.png" alt="Admin" /> {}
       </aside>
       <aside className="admin_form">
         <form onSubmit={handleLogin}>
