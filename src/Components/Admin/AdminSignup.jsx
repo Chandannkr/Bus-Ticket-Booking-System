@@ -23,7 +23,7 @@ export default function AdminSignup() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             type="text"
-            placeholder="Enter your username"
+            placeholder="Enter your Username"
           />
 
           <label>Email:</label>
@@ -32,7 +32,7 @@ export default function AdminSignup() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             type="email"
-            placeholder="Enter your email"
+            placeholder="Enter your Email"
           />
 
           <label>Password:</label>
@@ -41,7 +41,7 @@ export default function AdminSignup() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
-            placeholder="Enter your password"
+            placeholder="Enter your Password"
           />
 
           <button type="submit">Signup</button>
