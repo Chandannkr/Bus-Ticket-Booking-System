@@ -27,7 +27,7 @@ export default function LandingPage() {
           <h1>India's No. 1 Online Bus Ticket Booking Site</h1>
         </div>
         <p>
-          Book bus tickets online from the largest Bus ticket booking site with the best bus operators. Book your bus ticket now!
+          Book bus tickets online from the largest Bus ticket booking site with the best Bus operators. Book your bus ticket now!
         </p>
 
         <div className={styles.container}>
